@@ -2,10 +2,8 @@ package com.scoreboard;
 
 
 import com.scoreboard.entities.Team;
-import com.scoreboard.exceptions.GameNotFoundException;
 import com.scoreboard.exceptions.TeamAlreadyPlayingException;
 import com.scoreboard.exceptions.TeamAreTheSameException;
-import com.scoreboard.exceptions.TeamOrResultCannotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,20 +31,11 @@ public class CliRunner {
             choice = scanner.nextLine();
 
             switch (choice) {
-                case "1":
-                    startGame();
-                    break;
-                case "2":
-                    finishGame();
-                    break;
-                case "3":
-                    updateScore();
-                    break;
-                case "4":
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
+                case "1" -> startGame();
+                case "2" -> finishGame();
+                case "3" -> updateScore();
+                case "4" -> System.exit(0);
+                default -> System.out.println("Invalid choice. Please try again.");
             }
 
             displayResults();
@@ -77,7 +66,7 @@ public class CliRunner {
         System.out.println("Game finished successfully.");
     }
 
-    private static void updateScore() throws TeamOrResultCannotFoundException, GameNotFoundException {
+    private static void updateScore() {
         List<Team> teams = userInputAndSetTeams();
 
         System.out.print("Enter home team score: ");
