@@ -4,14 +4,14 @@ import java.util.Date;
 
 public class Game {
 
-    private int id;
+    private Integer id;
     private Team homeTeam;
     private Team awayTeam;
     private int homeScore = 0;
     private int awayScore = 0;
     private Date initDate;
 
-    public Game(int id, Team homeTeam, Team awayTeam) {
+    public Game(Integer id, Team homeTeam, Team awayTeam) {
         this.id = id;
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
