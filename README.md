@@ -23,7 +23,7 @@ The Scoreboard Library is a Java library that provides functionality for managin
 
 2. Create an instance of the ScoreBoard class to manage the game scores.
 
-```java
+```bash
        ScoreBoard scoreBoard = new ScoreBoard();
 
 // Start a new game
@@ -32,10 +32,10 @@ The Scoreboard Library is a Java library that provides functionality for managin
         Game game = scoreBoard.startGame(1, homeTeam, awayTeam);
 
 // Update the score
-        scoreBoard.updateScore(game, 3, 2);
+        scoreBoard.updateScore(homeTeam, awayTeam, 3, 2);
 
 // Finish a game
-        scoreBoard.finishGame(game);
+        scoreBoard.finishGame(homeTeam, awayTeam);
 
 // Get the summary of all games
         List<Game> summary = scoreBoard.getSummaryAsString();
